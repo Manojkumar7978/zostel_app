@@ -72,5 +72,27 @@ router.get('/userDetails', getlogedinuser, async (req, res) => {
 })
 
 
+router.patch('/password', async (req, res) => {
+    try {
+        let data = req.body
+        let user = await userModel.find({ Email: email })
+        bcrypt.compare(data.oldpassword, user.Password, async function (err, result) {
+            if (err) {
+                res.send('Please enter correct older password.')
+                return;
+            } else {
+                let x = await userModel.findByIdAndUpdate(user._id, {
+                    Password: data.newpassword
+                })
+                res.send('Password resent Sucessfully')
+            }
+        });
+
+    } catch (error) {
+        res.status(400).send('something went wrong')
+    }
+})
+
+
 
 module.exports = router
