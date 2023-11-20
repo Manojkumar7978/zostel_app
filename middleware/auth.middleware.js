@@ -2,7 +2,7 @@
 require('dotenv').config()
 
 
-const JWT_SECRET_KEY = process.env.SCRETE_KEY
+const JWT_SECRET_KEY = "sdufhasdfhaskfhsahfksahfksahdf"
 let jwt = require('jsonwebtoken')
 
 let getlogedinuser = async (req, res, next) => {

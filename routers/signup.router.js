@@ -6,7 +6,7 @@ const getlogedinuser = require('../middleware/auth.middleware')
 const bcrypt = require('bcrypt');
 require('dotenv').config()
 console.log(process.env.SCRETE_KEY)
-let JWT_SCRETE_KEY = process.env.SCRETE_KEY
+let JWT_SCRETE_KEY = "sdufhasdfhaskfhsahfksahfksahdf"
 
 
 router.post('/signup', async (req, res) => {
