@@ -19,7 +19,7 @@ app.use('/', bookingHistoryRouter)
 
 
 
-app.listen(process.env.PORT, () => {
+app.listen(8080, () => {
     main();
-    console.log('app listen to port 3000')
+    console.log('app listen to port 8080')
 })
